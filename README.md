@@ -1,2 +1,4 @@
-# hello-world
-QR code component
+# nft-card
+NFT-PREVİEW CARD
+
+FRONTEND MENTOR CHALLENG
