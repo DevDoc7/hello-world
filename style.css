@@ -1,47 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: hsl(212, 45%, 89%);
-  margin: 0 auto;
-  width: 1440px;
+  background-color: hsl(217, 54%, 11%); 
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: 'Outfit', sans-serif; 
 }
 
-.qrcode {
-  border-radius: 15px;
-  height: 300px;
-  width: 300px;
-  margin: 25px 25px;
-  position: relative;
-
+.card {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+  text-align: left;
+  padding: 1rem;
+  max-height: 600px;
+  max-width: 350px;
+  box-shadow: 0 30px 0 17px hsl(217, 56%, 8%, 0.25), 0 25px 0 50px hsl(217, 56%, 8%, 0.15); 
 }
 
-.qr {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 15px;
-  height: 550px;
-  width: 350px;
-  margin: 250px 545px;
+.container {
   position: relative;
+  max-width: 300px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.equilibrium {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(178, 100%, 50%);
+  border-radius: 10px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.view {
+  position: absolute;
+  top: 42%;
+  left: 42%;
+  opacity: 0;
+}
+
+.container:hover .overlay{
+  opacity: 0.5;
+}
+
+.container:hover .view {
+  opacity: 1;
+}
+
+.text1:hover, span.text-by:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+  font-size: 16px;
+  font-weight: 200;
+  margin: 10px 10px 10px 10px;
+}
+
+.text1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 10px 15px 10px; 
+}
+
+.byline .text-by {
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-weight: 200;
+  margin: 0;
+}
+
+.etherium {
+  display: inline-block;
+  margin: 10px 10px 5px 10px;
+}
+
+.text-eth {
+  color: hsl(178, 100%, 50%);
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px 0px 0px 5px;
+}
+
+.text-time {
+  margin: 0px 0px 0px 5px;
+}
+
+.etherium img {
+  height: 16px;
+  position: relative;
+  top: 2.5px;
+}
+
+.deadline img {
+  position: relative;
+  top: 2.5px;
+}
+
+.text-time, span {
+  color: hsl(215, 51%, 70%);
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.deadline {
+  color: hsl(215, 51%, 70%);
+  display: inline-block;
+  text-align: right;
+  margin: 10px 10px 5px 10px;
+  position: relative;
+  left: 110px;
+}
+
+.byline {
+  margin: 10px 10px 15px 10px;
+  border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.avatar {
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 15px;
+  position: relative;
+  top: 10px;
   
 }
 
-.boldline{
-  color: black;
-  font-family: 'Outfit', sans-serif;
-  font-size: 22px;
-  font-weight: bold;
-  position: relative;
-  text-align: center;
-  margin: 5px 40px; 
-  width: 270px;
-}
-
-.subtext {
-  color: darkgray;
-  font-family: 'Outfit', sans-serif;
-  font-size: 15px;
-  font-weight: 400px; 
-  position: relative;
-  text-align: center;
-  padding: 10px 10px;
-  margin: 15px 30px;
-  width: 270px;
+.byline span {
+  margin: 0px 0px 0px 15px
 }
